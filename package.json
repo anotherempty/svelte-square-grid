@@ -1,5 +1,5 @@
 {
-	"name": "package",
+	"name": "svelte-square-grid",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "svelte-kit dev",
