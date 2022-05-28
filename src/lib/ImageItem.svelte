@@ -24,8 +24,6 @@
   const formaters = [capitalize, (word) => word, (word) => word.toUpperCase()];
 
   const formater = formaters[rand(formaters.length)];
-
-  console.log(formater);
 </script>
 
 <div class="item relative" let:index let:itemSize>
@@ -41,7 +39,7 @@
         style="width:2.5em; height: 2.5em; border-radius: 50%;"
       />
       <div class="text-white px-3">
-        <div class="text-xl">
+        <div class="text-xl leading-6 -mt-1">
           {randomWords({
             min: 1,
             max: 5,

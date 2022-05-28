@@ -1,7 +1,7 @@
 <script>
   import Seo from "./lib/Seo.svelte";
 
-  import Gallery from "./lib/Gallery.svelte";
+  import Gallery from "svelte-square-grid";
   import ImageItem from "./lib/ImageItem.svelte";
 
   import InfiniteLoading from "svelte-infinite-loading";
@@ -14,7 +14,6 @@
     fetch(`https://picsum.photos/v2/list?page=${page}&limit=${limit}`)
       .then((response) => response.json())
       .then((data) => {
-				console.log(data);
         if (data.length) {
           page += 1;
           images = images.concat(data);
