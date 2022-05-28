@@ -1,13 +1,13 @@
 <script>
 	import SquareGrid from '$lib/SquareGrid.svelte';
+	import { span } from '$lib/span';
 </script>
 
 <SquareGrid itemCount={50}>
 	<div
 		slot="item"
 		let:index
-		let:span
-		use:span={{ direction: index % 2 === 0 ? 'col' : 'row', amount: 2 }}
+		use:span={{ direction: index % 3 === 0 ? 'col' : '', amount: 2 }}
 		use:span={{ direction: index % 5 === 0 ? 'row' : '', amount: 2 }}
 		let:itemSize
 		style="border:1px solid red;"

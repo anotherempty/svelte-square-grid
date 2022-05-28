@@ -7,55 +7,17 @@
 		width: number;
 	}
 
-	interface Span {
-		direction: 'row' | 'col' | '';
-		amount: number;
-	}
-
 	export let colCount = 4;
 	export let gap = 0;
 	export let itemCount = 0;
-	export let breakpoints: Array<Breakpoint> = [
-		{
-			colCount: 2,
-			gap: 0,
-			width: 600
-		},
-		{
-			colCount: 3,
-			gap: 0,
-			width: 768
-		},
-		{
-			colCount: 5,
-			gap: 10,
-			width: 992
-		},
-		{
-			colCount: 6,
-			gap: 10,
-			width: 1200
-		},
-		{
-			colCount: 8,
-			gap: 10,
-			width: Infinity
-		}
-	];
+	export let breakpoints: Array<Breakpoint> = [];
 
 	let winWidth = 0;
 	let gridWidth = 0;
 	let itemSize = 0;
 
-	const span = (node: HTMLElement, { direction, amount }: Span) => {
-		if (direction === '') return;
-		let spanning = { row: 'grid-row-end', col: 'grid-column-end' }[direction];
-		Object.assign(node.style, {
-			[spanning]: `span ${amount}`
-		});
-	};
-
 	const checkBreakpoint = () => {
+		if (breakpoints.length === 0) return;
 		if (winWidth <= breakpoints[0].width) {
 			colCount = breakpoints[0].colCount;
 			gap = breakpoints[0].gap;
@@ -85,7 +47,7 @@
 	bind:clientWidth={gridWidth}
 >
 	{#each { length: itemCount } as item, i}
-		<slot name="item" {span} index={i} {itemSize} />
+		<slot name="item" index={i} {itemSize} />
 	{/each}
 </div>
 
