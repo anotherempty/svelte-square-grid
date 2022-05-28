@@ -14,7 +14,7 @@ npm install svelte-square-grid
 
 ```svelte
 <script>
-import { SquareGrid } from 'svelte-square-grid';
+import SquareGrid from 'svelte-square-grid';
 </script>
 
 <SquareGrid itemCount={50}>
@@ -88,7 +88,7 @@ A `span` *action* is available to set column and row spanning, takes `direction`
 
 ```svelte
 <script>
-import { SquareGrid, span } from "svelte-square-grid";
+import SquareGrid, { span } from "svelte-square-grid";
 </script>
 
 <SquareGrid itemCount={50}>
