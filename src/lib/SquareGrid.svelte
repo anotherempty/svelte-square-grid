@@ -8,7 +8,7 @@
 	}
 
 	interface Span {
-		direction: 'row' | 'col';
+		direction: 'row' | 'col' | '';
 		amount: number;
 	}
 
@@ -48,6 +48,7 @@
 	let itemSize = 0;
 
 	const span = (node: HTMLElement, { direction, amount }: Span) => {
+		if (direction === '') return;
 		let spanning = { row: 'grid-row-end', col: 'grid-column-end' }[direction];
 		Object.assign(node.style, {
 			[spanning]: `span ${amount}`
