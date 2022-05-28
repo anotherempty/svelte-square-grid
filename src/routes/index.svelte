@@ -24,8 +24,7 @@
 </script>
 
 <script>
-	import SquareGrid from '$lib';
-	import { span } from '$lib';
+	import SquareGrid,  { span } from '$lib';
 
 	export let images;
 </script>
