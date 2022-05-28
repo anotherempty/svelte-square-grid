@@ -1,6 +1,5 @@
 <script>
-	import SquareGrid from '$lib/SquareGrid.svelte';
-	import { span } from '$lib/span';
+	import SquareGrid from '$lib';
 
 	let items = { length: 30 };
 

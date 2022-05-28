@@ -24,8 +24,8 @@
 </script>
 
 <script>
-	import SquareGrid from '$lib/SquareGrid.svelte';
-	import { span } from '$lib/span';
+	import SquareGrid from '$lib';
+	import { span } from '$lib';
 
 	export let images;
 </script>
