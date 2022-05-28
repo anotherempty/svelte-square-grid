@@ -1,6 +1,7 @@
 # Svelte Square Grid
 
 A simple square **based** grid for Svelte. <br> Can help you to easily create an image gallery like Artstation's, Windows 8 start menu, Android's photo gallery and more.
+![demo screenshot](https://i.ibb.co/KGd0v5M/Opera-Snapshot-2022-05-28-222239-localhost.png)
 
 [See the demo](https://anotherempty.github.io/svelte-square-grid/)
 
