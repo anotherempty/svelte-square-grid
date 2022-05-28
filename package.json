@@ -1,6 +1,27 @@
 {
 	"name": "svelte-square-grid",
 	"version": "0.0.1",
+	"description": "A simple square **based** grid for Svelte. <br> Can help you to easily create an image gallery like Artstation's, Windows 8 start menu, Android's photo gallery and more.",
+	"keywords": [
+		"svelte",
+		"svelte-component",
+		"Square",
+		"Grid",
+		"Gallery"
+	],
+	"author": {
+		"name": "anotherempty",
+		"url": "https://github.com/anotherempty"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/anotherempty/svelte-square-grid.git"
+	},
+	"homepage": "https://anotherempty.github.io/svelte-square-grid/",
+	"bugs": {
+		"url": "https://github.com/anotherempty/svelte-square-grid/issues"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
