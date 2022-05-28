@@ -35,7 +35,7 @@ import SquareGrid from 'svelte-square-grid';
 |-------------|-------------------|-------------|-----------------------------------------------------------------------|
 | itemCount   | number            | 0           | number of items to insert inside the grid                             |
 | colCount    | number            | 4           | number of columns                                                     |
-| gap         | number            | 0           | gap size                                                              |
+| gap         | number            | 0           | gap size  in pixel                                                            |
 | breakpoints | Array\<Breakpoint> | [] | change grid display based on screen size, see below for an example |
 
 
@@ -46,7 +46,7 @@ interface Breakpoint {
 	width: number;
 }
   
-/** MUST be sorted along width in ascending order */
+/** MUST be sorted by width in ascending order */
 export let breakpoints = [
 	{
 		colCount: 2,
@@ -81,7 +81,7 @@ export let breakpoints = [
 | Prop     | Type     | Description                                                         |
 |----------|----------|---------------------------------------------------------------------|
 | index    | number   | index of the item inside the grid                                   |
-| itemSize | number   | size of a square inside of the grid : gridWidth / columnCount       |
+| itemSize | number   | size of a square inside of the grid (in pixel) : gridWidth / columnCount       |
 
 ### Spanning
 
