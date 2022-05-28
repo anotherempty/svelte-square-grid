@@ -12,12 +12,14 @@
 	export let itemCount = 0;
 	export let breakpoints: Array<Breakpoint> = [];
 
-	let winWidth = 0;
 	let gridWidth = 0;
 	let itemSize = 0;
 
 	const checkBreakpoint = () => {
 		if (breakpoints.length === 0) return;
+
+		let winWidth = window.innerWidth;
+
 		if (winWidth <= breakpoints[0].width) {
 			colCount = breakpoints[0].colCount;
 			gap = breakpoints[0].gap;
@@ -39,7 +41,7 @@
 	$: itemSize = (gridWidth - gap * (colCount - 1)) / colCount;
 </script>
 
-<svelte:window on:resize={checkBreakpoint} bind:innerWidth={winWidth} />
+<svelte:window on:resize={checkBreakpoint} />
 
 <div
 	class="grid"
