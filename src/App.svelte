@@ -3,6 +3,7 @@
 
   import Gallery from "svelte-square-grid";
   import ImageItem from "./lib/ImageItem.svelte";
+  import NpmInstall from "./lib/NpmInstall.svelte";
 
   import InfiniteLoading from "svelte-infinite-loading";
 
@@ -28,7 +29,7 @@
     {
       colCount: 2,
       gap: 0,
-      width: 700, // 600px and below
+      width: 700,
     },
     {
       colCount: 3,
@@ -38,12 +39,30 @@
     {
       colCount: 5,
       gap: 0,
-      width: Infinity, // more than 1200px
+      width: 1980,
+    },
+    {
+      colCount: 10,
+      gap: 0,
+      width: Infinity,
     },
   ];
 </script>
 
 <Seo />
+
+<div
+  class="head absolute z-10 w-full text-white text-center p-6 pointer-events-none"
+>
+  <h1 class="text-5xl">Svelte Square Grid</h1>
+  <div class="text-white pointer-events-auto my-6">
+    <a
+      href="https://github.com/anotherempty/svelte-square-grid"
+      class="hover:underline">See on Github</a
+    >
+  </div>
+  <NpmInstall />
+</div>
 
 <Gallery itemCount={images.length} gap={0} colCount={5} {breakpoints}>
   <ImageItem
@@ -69,5 +88,15 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    position: relative;
+  }
+
+  .head {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.5) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 </style>
